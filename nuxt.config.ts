@@ -5,6 +5,14 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   quasar: {
-    /* */
+    plugins: ['Notify'],
+    config: {
+      notify: {
+        position: 'top-right',
+      },
+    },
+  },
+  imports: {
+    presets: [{ from: 'vue-i18n', imports: ['useI18n'] }],
   },
 });
